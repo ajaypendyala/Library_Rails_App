@@ -1,3 +1,4 @@
 class Library < ApplicationRecord
-  has_many :room
+  has_many :rooms
+  validates :library_id, :presence => true
 end
