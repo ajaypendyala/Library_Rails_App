@@ -1,0 +1,7 @@
+<h1> You Shall look at a Form Soon!</h1>
+
+<%= form_for(@booking)  do |f| %>
+    <%= f.label :Room %>
+    <%= f.collection_select(:Room_id, Room.all, :id, :to_s) %>
+    <%= submit_tag("Book") %>
+<% end %>
