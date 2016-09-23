@@ -1,0 +1,94 @@
+<head>
+  <!--Import Google Icon Font-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <!--<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>-->
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+ <div class="container">
+    <div class="row">
+      <div class="input-field col m3">
+        <label>Room Number</label>
+        <input id="text" type="text">
+
+      </div>
+      <div class="input-field col m3">
+        <select >
+          <option value="hunt">Hunt</option>
+          <option value="hill">Hill</option>
+        </select>
+        <label>Library</label>
+      </div>
+      <div class="input-field col m3">
+        <label>Min Capacity</label>
+        <input type="number" name="Min Capacity">
+      </div>
+      <div class="input-field col m3">
+          <input type="time">
+      </div>
+
+      <div class="input-field col m3">
+        <input type="date">
+      </div>
+      <a class="waves-effect waves-light btn">button</a>
+    </div>
+ </div>
+  <!--<h1>List of Rooms</h1>-->
+  <div class="container">
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Room Number</th>
+          <th>Library</th>
+          <th>Status</th>
+          <th>Book?</th>
+        </tr>
+      </thead>
+      <% @rooms.each do |room| %>
+        <tr>
+          <td>
+            <a href="/rooms/<%= room.id %>"><%= room.id %></a>            
+          </td>
+          <td>
+            <%= room.room_number %>
+          </td>
+          <td>
+            <%= room.library %>
+          </td>
+          <td>
+            <% if room.available? %>
+              <a href=""> Available!</a>
+            <% else %>
+              <a href="">Not Available</a>
+            <% end %>
+          </td>
+          <td>
+            <% if room.available? %>
+              <a class="waves-effect waves-light btn" href="/booking/<%= room.id %>">Book Now</a>
+            <% else %>
+              <a class="btn disabled">Book Now</a>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <!--<script type="text/javascript" src="js/materialize.min.js"></script>-->
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+  <script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+      $('select').material_select();
+    });
+  </script>
+
+</body>
