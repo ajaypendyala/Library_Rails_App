@@ -10,7 +10,7 @@ class BookingsController < ApplicationController
   end
 
   def create
-  	@booking = Booking.new(booking_params)
+  	@booking = Booking.create(booking_params)
 
         	@booking.save!
         flash[:notice]='Booking created. Admin will review the request.'
@@ -19,6 +19,7 @@ class BookingsController < ApplicationController
 
 
   def booking_params
-      		params.require(:booking).permit(:Room,:start_time)
+  	        puts params.inspect
+      		params.require(:booking).permit(:User_id,:Room_id,:start_time)
   end
 end
