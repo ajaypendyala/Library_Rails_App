@@ -51,6 +51,7 @@ class Ability
       can :access, :rails_admin
       can :dashboard
       can :read, :all
+      can :manage, :all
     end
   end
 end
