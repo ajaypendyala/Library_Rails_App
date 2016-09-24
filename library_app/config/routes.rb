@@ -5,5 +5,9 @@ Rails.application.routes.draw do
   resource :bookings
   get "book_new" => "bookings#new", as: "book_new"
   resources :rooms
-  root 'rooms#index'
+
+  get "booking_history" => "users#booking_history", as: "booking_history"
+
+  root 'users#booking_history'
+
 end

@@ -13,6 +13,7 @@ class BookingsController < ApplicationController
   	@booking = Booking.create(booking_params)
 
         	@booking.save!
+    UserMailer.notification_email(@booking.User).deliver_now
         flash[:notice]='Booking created. Admin will review the request.'
         redirect_to ("/rooms/")
   end
