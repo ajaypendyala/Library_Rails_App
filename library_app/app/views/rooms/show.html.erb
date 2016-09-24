@@ -33,7 +33,7 @@
   <!--</div>-->
 
   <div class="container">
-    <div class="row">
+    <!--div class="row">
       <div class="input-field col m3">
         <label>Room Number</label>
         <input id="text" type="text">
@@ -60,7 +60,33 @@
       <a class="waves-effect waves-light btn">button</a>
 
     </div>
-  </div>
+  </div-->
+  <ul class="collapsible" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>Library select</div>
+      <div class="collapsible-body">
+      
+        <select >
+          <option value="hunt">Hunt</option>
+          <option value="hill">Hill</option>
+        </select>
+        
+      
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">place</i>Min capacity</div>
+      <div class="collapsible-body"><label>Min Capacity</label>
+        <input type="number" name="Min Capacity">
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">whatshot</i><input type="time"></div>
+      <div class="collapsible-body"><p><input type="date"></p></div>
+    </li>
+    <li><a class="waves-effect waves-light btn">search</a> </li>
+  </ul>
+  </div>    
   <!--<h1>List of Rooms</h1>-->
   <div class="container">
     <table>
@@ -87,6 +113,16 @@
           <!--<td>-->
             <!--<%# room.available? %>-->
           <!--</td>-->
+          <td>
+          </td>
+          <td>
+          
+            <!---input type="submit" value="book" onclick="window.location = '/bookings/create'"-->
+            <%= link_to 'Book', book_new_path %>
+
+
+          </td>
+          
         </tr>
     <% end %>
     </table>
@@ -97,9 +133,14 @@
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
   <script type="text/javascript" charset="utf-8">
-    $(document).ready(function() {
-      $('select').material_select();
+   // $(document).ready(function() {
+     // $('select').material_select();
+    //});
+    $(document).ready(function(){
+    $('.collapsible').collapsible({
+      accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
     });
+  });
   </script>
 
 </body>
