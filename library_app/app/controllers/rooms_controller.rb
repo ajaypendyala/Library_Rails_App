@@ -6,6 +6,11 @@ class RoomsController < ApplicationController
   	# if params.has_key?(:search)
   	# 	params = search_params_cleaner(params)	
   	# end
+  	if current_user
+  		if current_user.is_admin? or current_user.is_super_admin?
+  			redirect_to '/admin'
+  		end
+  	end
   	search={}
   	@libraries = Library.all  #for the dropdown
   	safe_params = params.permit(:search)
