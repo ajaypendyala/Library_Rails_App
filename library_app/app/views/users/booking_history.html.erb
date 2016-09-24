@@ -1,30 +1,29 @@
-<%= link_to "Back", "/user/show/" + session[:user_name] %>
-<font color="blue"><%= link_to "Logout", logout_path,method: "delete" %></font>
-
-<p> Your Booking History </p>
-<table border="1">
-  <tr>
-    <% if @history.count==0 %>
-        <p> No bookings yet </p>
-    <% else %>
+<p> Welcome user <%= current_user.email %>,please choose an option </p>  
+<table border = 1>
+   <tr>
+    <td> <%=link_to 'Edit profile',"/users/edit/" %> </td>
+   </tr>
+   <tr>
+  <td> <%=link_to 'Search room', "/rooms" %> </td>
+   </tr> 
+</table>
+<table>
+ <thead>
         <td> ROOM NUMBER </td>
-        <td> LIBRARY </td>
         <td> BOOKING TIME</td>
         <td> CHECKOUT TIME</td>
         <td> STATUS </td>
         <td> ACTIVITY </td>
-    <%end%>
-  </tr>
-  <%@history.each do |h|%>
+</thead>
 
+<% current_user.Booking.all.each do |booking| %>
       <tr>
-        <td> <%= h.room_number %> </td>
-        <td> <%= h.library %> </td>
-        <td> <%= h.booking_time %> </td>
-        <td> <%= h.checkout_time %> </td>
-        <td> <%= h.booking_status %> </td>
-        <% if h.booking_status=='Booked' %>
-            <td><%= link_to 'Drop Room', "/user/drop_room/" + session[:user_name] + "?room_number=" + h.room_number %></td>
-        <%end%>
+        <td> <%= booking.Room.to_s %> </td>
+        <td> <%= booking.start_time %> </td>
+        <td> <%= booking.start_time + 2.hours %> </td>
+        <%# if h.booking_status=='Booked' %>
+            <!-- <td><%# link_to 'Drop Room', "/user/drop_room/" + session[:user_name] + "?room_number=" + h.room_number %></td> -->
+        <%#end%>
       </tr>
-  <%end%>
+<% end %>
+</table>
