@@ -2,42 +2,41 @@
   <!--Import Google Icon Font-->
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
-  <!--<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>-->
+  <!-- <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/> -->
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
 
-  <!--Let browser know website is optimized for mobile-->
+  <!-- Let browser know website is optimized for mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 
 <body>
  <div class="container">
-    <div class="row">
-      <div class="input-field col m3">
+    <form class="row" action="/rooms" method='get'>
+      <div class="input-field col m2">
         <label>Room Number</label>
-        <input id="text" type="text">
+        <input id="text" type="text" name="search[room_number]">
 
       </div>
-      <div class="input-field col m3">
-        <select >
-          <option value="hunt">Hunt</option>
-          <option value="hill">Hill</option>
+      <div class="input-field col m2">
+        <select  name="search[library_id]">
+          <% @libraries.each do |library| %>
+            <option value="<%= library.id %>"><%= library %></option>
+          <% end %>
         </select>
         <label>Library</label>
       </div>
-      <div class="input-field col m3">
-        <label>Min Capacity</label>
-        <input type="number" name="Min Capacity">
+      <div class="input-field col m2">
+        <label>Capacity</label>
+        <input type="number" name="search[capacity]">
       </div>
       <div class="input-field col m3">
-          <input type="time">
+          <input type="datetime-local" name="search[start_time]">
       </div>
-
-      <div class="input-field col m3">
-        <input type="date">
+       <div class="input-field col m2">
+        <input type="submit" value="Search" class="waves-effect waves-light btn" ></input>
       </div>
-      <a class="waves-effect waves-light btn">button</a>
-    </div>
+    </form>
  </div>
   <!--<h1>List of Rooms</h1>-->
   <div class="container">
@@ -51,32 +50,36 @@
           <th>Book?</th>
         </tr>
       </thead>
-      <% @rooms.each do |room| %>
-        <tr>
-          <td>
-            <a href="/rooms/<%= room.id %>"><%= room.id %></a>            
-          </td>
-          <td>
-            <%= room.room_number %>
-          </td>
-          <td>
-            <%= room.library %>
-          </td>
-          <td>
-            <% if room.available? %>
-              <a href=""> Available!</a>
-            <% else %>
-              <a href="">Not Available</a>
-            <% end %>
-          </td>
-          <td>
-            <% if room.available? %>
-              <a class="waves-effect waves-light btn" href="/booking/<%= room.id %>">Book Now</a>
-            <% else %>
-              <a class="btn disabled">Book Now</a>
-            <% end %>
-          </td>
-        </tr>
+      <% if @rooms %>
+        <% @rooms.each do |room| %>
+          <tr>
+            <td>
+              <a href="/rooms/<%= room.id %>"><%= room.id %></a>            
+            </td>
+            <td>
+              <%= room.room_number %>
+            </td>
+            <td>
+              <%= room.library %>
+            </td>
+            <td>
+              <% if room.available? %>
+                <a href=""> Available!</a>
+              <% else %>
+                <a href="">Not Available</a>
+              <% end %>
+            </td>
+            <td>
+              <% if room.available? %>
+                <a class="waves-effect waves-light btn" href="/booking/<%= room.id %>">Book Now</a>
+              <% else %>
+                <a class="btn disabled">Book Now</a>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+      <% else %>
+        <h5> No Rooms</h5>
       <% end %>
     </table>
   </div>
