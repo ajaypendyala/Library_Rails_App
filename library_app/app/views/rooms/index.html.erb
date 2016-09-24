@@ -63,14 +63,14 @@
               <%= room.library %>
             </td>
             <td>
-              <% if room.available? %>
+              <% if room.available? @start_time %>
                 <a href=""> Available!</a>
               <% else %>
                 <a href="">Not Available</a>
               <% end %>
             </td>
             <td>
-              <% if room.available? %>
+              <% if room.available? @start_time %>
                 <a class="waves-effect waves-light btn" href="/booking/<%= room.id %>">Book Now</a>
               <% else %>
                 <a class="btn disabled">Book Now</a>

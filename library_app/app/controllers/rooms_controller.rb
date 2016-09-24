@@ -9,14 +9,22 @@ class RoomsController < ApplicationController
   	search={}
   	@libraries = Library.all  #for the dropdown
   	if(params.has_key? "search")
+  		# cleaning up the params from query
+  		# first make the start time filter
+  		if params[:search][:start_time] != ""
+  			@start_time = params[:search][:start_time]
+  		else
+  			@start_time = DateTime.now
+  		end
+  		params[:search].delete "start_time"
   		params[:search].each do |key, val|
 	  		unless val == ""
 	  			search[key] = val
 	  		end
   		end
-  		puts search.to_s
   		@rooms = Room.where search
   	else
+  		@start_time = DateTime.now
     	@rooms = Room.all
     end
   end

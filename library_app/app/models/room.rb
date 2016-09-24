@@ -8,7 +8,8 @@ class Room < ApplicationRecord
     return self.library.name + ", Room " + self.room_number.to_s
   end
 
-  def available?(start_time = DateTime.now)
+  def available?(start_time)
+  	puts start_time
   	unless (self.booking.where('start_time between ? and ?', (start_time.to_datetime - 2.hours).to_datetime, (start_time.to_datetime + 2.hours).to_datetime).length > 0) 
   		return true
   	else 
