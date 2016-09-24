@@ -48,7 +48,7 @@ class Ability
       # cannot :destroy, User, :id => user.id
       # Allow super admins to wreck havoc!
     else
-      can :access, :rails_admin
+      cannot :access, :rails_admin
       can :dashboard
       can :read, :all
       can :manage, :all

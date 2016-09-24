@@ -1,0 +1,80 @@
+
+ <div class="container">
+    <form class="row" action="/rooms" method='get'>
+      <div class="input-field col m2">
+        <label>Room Number</label>
+        <input id="text" type="text" name="search[room_number]">
+
+      </div>
+      <div class="input-field col m2">
+        <select  name="search[library_id]">
+          <option value=""></option>
+          <% @libraries.each do |library| %>
+            <option value="<%= library.id %>"><%= library %></option>
+          <% end %>
+        </select>
+        <label>Library</label>
+      </div>
+      <div class="input-field col m2">
+        <label>Capacity</label>
+        <input type="number" name="search[capacity]">
+      </div>
+      <div class="input-field col m3">
+          <input type="datetime-local" name="search[start_time]">
+      </div>
+       <div class="input-field col m2">
+        <input type="submit" value="Search" class="waves-effect waves-light btn" ></input>
+      </div>
+    </form>
+ </div>
+  <!--<h1>List of Rooms</h1>-->
+  <div class="container">
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Room Number</th>
+          <th>Library</th>
+          <th>Status</th>
+          <th>Book?</th>
+        </tr>
+      </thead>
+      <% if @rooms %>
+        <% @rooms.each do |room| %>
+          <tr>
+            <td>
+              <a href="/rooms/<%= room.id %>"><%= room.id %></a>            
+            </td>
+            <td>
+              <%= room.room_number %>
+            </td>
+            <td>
+              <%= room.library %>
+            </td>
+            <td>
+              <% if room.available? @start_time %>
+                <a href=""> Available!</a>
+              <% else %>
+                <a href="">Not Available</a>
+              <% end %>
+            </td>
+            <td>
+              <% if room.available? @start_time %>
+                <%= link_to 'Book', book_new_path %>
+              <% else %>
+                <a class="btn disabled">Book Now</a>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+      <% else %>
+        <h5> No Rooms</h5>
+      <% end %>
+    </table>
+  </div>
+<!-- SCRIPT T ENABLE DROPDOWN -->
+  <script type="text/javascript" charset="utf-8">
+  $(document).ready(function() {
+    $('select').material_select();
+  });
+  </script>
