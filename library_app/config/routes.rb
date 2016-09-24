@@ -4,5 +4,9 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resource :bookings
   resources :rooms
+
   get "booking_history" => "users#booking_history", as: "booking_history"
+
+  root 'users#booking_history'
+
 end

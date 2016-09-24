@@ -7,6 +7,9 @@
   <td> <%=link_to 'Search room', "/rooms" %> </td>
    </tr> 
 </table>
+<% if current_user.Booking.all.length==0 %>
+    <p> No Bookings yet! </p>
+<% else %>
 <table>
  <thead>
         <td> ROOM NUMBER </td>
@@ -26,4 +29,5 @@
         <%#end%>
       </tr>
 <% end %>
+<%end%>
 </table>
