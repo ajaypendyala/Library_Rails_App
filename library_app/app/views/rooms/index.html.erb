@@ -60,9 +60,9 @@
             </td>
             <td>
               <% if room.available? @start_time %>
-                <a class="waves-effect waves-light btn" href="/booking/<%= room.id %>">Book Now</a>
+                <%= link_to 'Book', book_new_path, class: "waves-effect waves-light btn" %>
               <% else %>
-                <a class="btn disabled">Book Now</a>
+                <a class="btn disabled">Book</a>
               <% end %>
             </td>
           </tr>
