@@ -1,0 +1,24 @@
+
+	<h3>
+		<%= @room.room_number%> , <%= @room.library%>, Capacity : <%= @room.capacity %>
+	</h3>
+	<div class="container">
+		<table>
+			<thead>
+				<th> Booking ID</th>
+				<th> User </th>
+				<th> Date </th>
+				<th> Start Time</th>
+				<th> End Time </th>
+			</thead>
+			<% @room.booking.order(start_time: :desc).each do |booking| %>
+			<tr>
+				<td> <%= booking.id %></td>
+				<td> <%= booking.User.email %></td>
+				<td> <%= booking.start_time.to_date %></td>
+				<td> <%= booking.start_time %></td>
+				<td> <%= booking.start_time + 2.hours%></td>
+			</tr>
+			<% end %>
+		</table>
+	</div>
