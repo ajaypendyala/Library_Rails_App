@@ -20,6 +20,7 @@
       </div>
       <div class="input-field col m2">
         <select  name="search[library_id]">
+          <option value=""></option>
           <% @libraries.each do |library| %>
             <option value="<%= library.id %>"><%= library %></option>
           <% end %>

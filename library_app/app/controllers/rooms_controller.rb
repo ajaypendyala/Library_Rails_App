@@ -8,6 +8,7 @@ class RoomsController < ApplicationController
   	# end
   	search={}
   	@libraries = Library.all  #for the dropdown
+  	safe_params = params.permit(:search)
   	if(params.has_key? "search")
   		# cleaning up the params from query
   		# first make the start time filter
@@ -16,7 +17,8 @@ class RoomsController < ApplicationController
   		else
   			@start_time = DateTime.now
   		end
-  		params[:search].delete "start_time"
+  		params[:search].delete("start_time")
+  		# puts params.inspect
   		params[:search].each do |key, val|
 	  		unless val == ""
 	  			search[key] = val
