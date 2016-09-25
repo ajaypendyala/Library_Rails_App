@@ -1,5 +1,3 @@
-<h1> You Shall look at a Form Soon!</h1>
-
 <%= form_for(@booking)  do |f| %>
     <%= f.label :Room %>
     <%= f.collection_select(:room_id, Room.all, :id, :to_s) %>
