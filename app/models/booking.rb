@@ -1,8 +1,8 @@
 class Booking < ApplicationRecord
-  belongs_to :User
-  belongs_to :Room
+  belongs_to :user
+  belongs_to :room
   # attr_accessible :room_id, :user_id, :start_time
-  validates :User, :presence => true
-  validates :Room, :presence => true
+  validates :user, :presence => true
+  validates :room, :presence => true
   validates :start_time, :presence => true
 end
