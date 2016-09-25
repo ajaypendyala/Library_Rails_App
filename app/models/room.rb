@@ -3,6 +3,10 @@ class Room < ApplicationRecord
   has_many :booking , :dependent => :delete_all
   # has_one :library
   # attr_accessible :room_number, :library_id
+  validates :room_number, :presence => true
+  validates :capacity, :presence => true
+  validates :library, :presence => true
+
 
   def to_s
     return self.library.name + ", Room " + self.room_number.to_s
