@@ -11,13 +11,9 @@ class BookingsController < ApplicationController
 
   def create
   	@booking = Booking.create(booking_params)
-    # check if user has bookings in the future
-
-    # check if the room is available for the time given
-    @booking.save!
     UserMailer.notification_email(@booking.user).deliver_now
-        flash[:notice]='Booking created. Admin will review the request.'
-        redirect_to ("/rooms/")
+    flash[:notice]='Booking created. Admin will review the request.'
+    redirect_to ("/rooms/")
   end
 
 
