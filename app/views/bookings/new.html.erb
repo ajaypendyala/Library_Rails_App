@@ -2,7 +2,7 @@
 
 <%= form_for(@booking)  do |f| %>
     <%= f.label :Room %>
-    <%= f.collection_select(:Room_id, Room.all, :id, :to_s) %>
+    <%= f.collection_select(:room_id, Room.all, :id, :to_s) %>
     
 
             
@@ -15,7 +15,7 @@
 
             <div class="field" style="display: none;">
               <br>
-              <input type="number" name="booking[User_id]" value="<%= current_user.id %>">
+              <input type="number" name="booking[user_id]" value="<%= current_user.id %>">
               <%= current_user.id %> </input>
             </div>
 
