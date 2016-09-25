@@ -9,4 +9,8 @@ class User < ApplicationRecord
     return self.email
   end
 
+  def can_book_rooms?
+  	return false if self.Booking.where("start_time > ?", DateTime.now - 2.hours).length>0 else return true
+  end
+
 end

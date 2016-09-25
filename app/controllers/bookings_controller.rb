@@ -10,7 +10,9 @@ class BookingsController < ApplicationController
   end
 
   def create
-  	@booking = Booking.create(booking_params)
+  	@booking = Booking.new(booking_params)
+    raise "Not allowed to make more than 1 booking" unless @booking.user.can_book_rooms?
+    @booking.save
     UserMailer.notification_email(@booking.user).deliver_now
     flash[:notice]='Booking created. Admin will review the request.'
     redirect_to ("/rooms/")

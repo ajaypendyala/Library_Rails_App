@@ -8,6 +8,6 @@ class Booking < ApplicationRecord
   validates :room, :presence => true
   validates :start_time, :presence => true
   def check_if_booking_possible?
-  	raise "room not available" if not self.room.available?(self.start_time) else return true
+  	raise "Room not available!" if not self.room.available?(self.start_time) else return true
   end
 end
