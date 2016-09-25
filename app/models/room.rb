@@ -4,7 +4,7 @@ class Room < ApplicationRecord
   # has_one :library
   # attr_accessible :room_number, :library_id
   validates :room_number, :presence => true
-  validates :room_number, :uniqueness =>true
+  validates :room_number, :uniqueness => {:scope => :library}
   validates :capacity, :presence => true
   validates :library, :presence => true
 
