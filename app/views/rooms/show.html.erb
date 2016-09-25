@@ -14,7 +14,7 @@
 			<% @room.booking.order(start_time: :desc).each do |booking| %>
 			<tr>
 				<td> <%= booking.id %></td>
-				<td> <%= booking.User.email %></td>
+				<td> <%= booking.user.email %></td>
 				<td> <%= booking.start_time.to_date %></td>
 				<td> <%= booking.start_time %></td>
 				<td> <%= booking.start_time + 2.hours%></td>
