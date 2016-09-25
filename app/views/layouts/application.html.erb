@@ -22,20 +22,31 @@
   </head>
 
   <body>
-  	<% if user_signed_in? %>
-	  <li>
-	  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
-	  </li>
-	  <% if current_user.is_admin? or current_user.is_super_admin? %>
+
+  	 <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Front Desk</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/">Home</a></li>
+      	<li><a href="/rooms">Rooms</a></li>
+      	<% if user_signed_in? %>
+		  <% if current_user.is_admin? or current_user.is_super_admin? %>
+			  <li>
+			  <%= link_to('Admin','/admin') %>        
+			  </li>
+		  <% end %>
 		  <li>
-		  <%= link_to('Admin','/admin') %>        
+		  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
 		  </li>
-	  <% end %>
-	<% else %>
-	  <li>
-	  <%= link_to('Login', new_user_session_path)  %>  
-	  </li>
-	<% end %>
+		<% else %>
+		  <li>
+		  <%= link_to('Login', new_user_session_path)  %>  
+		  </li>
+		<% end %>
+      </ul>
+    </div>
+  </nav>
+  	
 
 <!--   	<% if notice %>
 	  <script type="text/javascript">
