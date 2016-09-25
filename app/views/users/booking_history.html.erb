@@ -25,10 +25,22 @@
         <td> <%= booking.room.to_s %> </td>
         <td> <%= booking.start_time %> </td>
         <td> <%= booking.start_time + 2.hours %> </td>
-        <%# if h.booking_status=='Booked' %>
-            <!-- <td><%# link_to 'Drop Room', "/user/drop_room/" + session[:user_name] + "?room_number=" + h.room_number %></td> -->
-        <%#end%>
+        <% if booking.start_time > DateTime.now - 2.hours %>
+            <td><a class="waves-effect waves-light btn" onClick="delete_booking(<%= booking.id %>)"> Delete</a></td>
+        <% end %>
       </tr>
 <% end %>
 <%end%>
 </table>
+
+<script type="text/javascript">
+function delete_booking(booking_id) {
+  $.ajax({
+      url: '/bookings/' + booking_id,
+      type: 'DELETE',
+      success: function(result) {
+          // location.reload(true);
+      }
+  });
+}
+</script>
