@@ -1,13 +1,6 @@
-<p> Welcome user <%= current_user.email %>,please choose an option </p>  
-<table border = 1>
-   <tr>
-    <td> <%=link_to 'Edit profile',"/users/edit/" %> </td>
-   </tr>
-   <tr>
-  <td> <%=link_to 'Search room', "/rooms" %> </td>
-   </tr> 
-</table>
-<h4> Booking History </h4>
+<p> Welcome  <%= current_user.username %>!</p>
+
+<h4> Your Booking History </h4>
 <% if current_user.Booking.all.length==0 %>
     <p> No Bookings yet! </p>
 <% else %>
