@@ -21,7 +21,7 @@
 
 <% current_user.Booking.all.each do |booking| %>
       <tr>
-        <td> <%= booking.Room.to_s %> </td>
+        <td> <%= booking.room.to_s %> </td>
         <td> <%= booking.start_time %> </td>
         <td> <%= booking.start_time + 2.hours %> </td>
         <%# if h.booking_status=='Booked' %>
