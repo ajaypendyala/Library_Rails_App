@@ -10,16 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160922210034) do
+ActiveRecord::Schema.define(version: 20160925223232) do
 
   create_table "bookings", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "room_id"
+    t.integer  "User_id"
+    t.integer  "Room_id"
     t.datetime "start_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["room_id"], name: "index_bookings_on_room_id"
-    t.index ["user_id"], name: "index_bookings_on_user_id"
+    t.index ["Room_id"], name: "index_bookings_on_Room_id"
+    t.index ["User_id"], name: "index_bookings_on_User_id"
   end
 
   create_table "libraries", force: :cascade do |t|
@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 20160922210034) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "username"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
