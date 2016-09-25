@@ -1,0 +1,35 @@
+<h1> You Shall look at a Form Soon!</h1>
+
+<%= form_for(@booking)  do |f| %>
+    <%= f.label :Room %>
+    <%= f.collection_select(:Room_id, Room.all, :id, :to_s) %>
+    
+
+            
+            
+
+            <div class="field">
+              <%= f.label :start_time %><br>
+              <%= f.datetime_local_field :start_time %>
+            </div>
+
+            <div class="field" style="display: none;">
+              <br>
+              <input type="number" name="booking[User_id]" value="<%= current_user.id %>">
+              <%= current_user.id %> </input>
+            </div>
+
+
+    
+            <div class="actions">
+               <%= f.submit %>
+            </div>
+         
+<% end %>
+
+<!-- SCRIPT T ENABLE DROPDOWN -->
+  <script type="text/javascript" charset="utf-8">
+  $(document).ready(function() {
+    $('select').material_select();
+  });
+  </script>
