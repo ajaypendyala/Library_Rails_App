@@ -3,7 +3,7 @@ class UserMailer < ApplicationMailer
 
   def notification_email(user)
     @user = user
-    @url  = 'http://example.com/login'
+    @url  = 'https://frontdesk517oodd.herokuapp.com'
     mail(to: @user.email, subject: 'Library Room Booking Notification')
   end
 end
