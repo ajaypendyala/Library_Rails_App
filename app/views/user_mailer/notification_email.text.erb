@@ -1,7 +1,7 @@
 Greetings, <%= @user %>
 ===============================================
 
-You have successfully booked the room  <%= @user.Booking.last.Room.to_s %> ,
+You have successfully booked the room  <%= @user.Booking.last.room.to_s %> ,
 for the time <%= @user.Booking.last.start_time %> to <%= @user.Booking.last.start_time+2.hours %>.
 
 To login to the site, just follow this link: <%= @url %>.
