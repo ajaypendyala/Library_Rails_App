@@ -11,8 +11,10 @@ class BookingsController < ApplicationController
 
   def create
   	@booking = Booking.create(booking_params)
+    # check if user has bookings in the future
 
-        	@booking.save!
+    # check if the room is available for the time given
+    @booking.save!
     UserMailer.notification_email(@booking.user).deliver_now
         flash[:notice]='Booking created. Admin will review the request.'
         redirect_to ("/rooms/")
@@ -20,7 +22,7 @@ class BookingsController < ApplicationController
 
 
   def booking_params
-  	        puts params.inspect
-      		params.require(:booking).permit(:user_id,:room_id,:start_time)
+  	puts params.inspect
+    params.require(:booking).permit(:user_id,:room_id,:start_time)
   end
 end
