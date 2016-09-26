@@ -18,7 +18,7 @@ Super_Admin user name: librarymanagentlists@gmail.com  , super_admin pass word: 
 
 Github repo: https://github.com/saratkavuru/Library_Rails_App
 
-Application URL: https://frontdesk517oodd.herokuapp.com/users/sign_in
+Application URL: http://frontdesk517oodd.herokuapp.com
 
 ##**Features:**
 
