@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   get "booking_history" => "users#booking_history", as: "booking_history"
 
+  get "invite" => "bookings#invite", as: "invite"
   root 'users#booking_history'
 
 end
