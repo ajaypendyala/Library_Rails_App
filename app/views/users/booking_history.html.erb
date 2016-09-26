@@ -6,11 +6,10 @@
 <% else %>
 <table>
  <thead>
-        <td> ROOM NUMBER </td>
-        <td> BOOKING TIME</td>
-        <td> CHECKOUT TIME</td>
-        <td> STATUS </td>
-        <td> ACTIVITY </td>
+        <th> ROOM NUMBER </th>
+        <th> BOOKING TIME</th>
+        <th> CHECKOUT TIME</th>
+        <th> STATUS </th>
 </thead>
 
 <% current_user.Booking.all.each do |booking| %>
