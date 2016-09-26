@@ -20,14 +20,17 @@ class BookingsController < ApplicationController
   end
 
   def invite
+
   end
 
   def invite_send
     @booking = Booking.find(session[:booking_id])
-    
-    UserMailer.invite_email(params(user).deliver_now
-
+    list_of_email = params[:emails].split(',')
+    puts list_of_email.to_s
+    UserMailer.invite_email(params(:emails)).deliver_now
+    redirect_to "/"
   end
+
   def booking_params
   	puts params.inspect
     params.require(:booking).permit(:user_id,:room_id,:start_time)

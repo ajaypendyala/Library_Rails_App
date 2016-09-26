@@ -2,10 +2,10 @@
 
 <p>The email addresses should be comma separated.</p>
 
-<%= form_tag :action => 'invite_send', :id => @some_object %>
+<%= form_tag :action => 'invite_send' do %>
 <p><label for = "Email">Email</label>:
 
-  <%= text_field 'Email' %></p>
+  <%= text_field_tag 'emails' %></p>
   <%= submit_tag "Send" %>
 
-<% end -%>
+<% end %>
