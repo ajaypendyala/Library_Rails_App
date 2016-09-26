@@ -25,8 +25,11 @@ class BookingsController < ApplicationController
 
   def invite_send
     @booking = Booking.find(session[:booking_id])
-    list_of_email = params[:emails].split(',')
-    puts list_of_email.to_s
+    params.permit(:emails)
+    list_of_email = params[:emails].gsub(/\s+/, "").split(',')
+    # list_of_emails -- Iterate over this. and send emails.
+    # @booking has the concernded booking
+    # CHANGE THE NEXT LINE.
     UserMailer.invite_email(params(:emails)).deliver_now
     redirect_to "/"
   end
