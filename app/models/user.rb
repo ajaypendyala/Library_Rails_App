@@ -10,7 +10,7 @@ class User < ApplicationRecord
   end
 
   def can_book_rooms?
-  	return false if self.Booking.where("start_time > ?", DateTime.now - 2.hours).length>0 else return true
+  	return false if ((self.Booking.where("start_time > ?", DateTime.now - 2.hours).length>0) and (self.multiple_bookings_allowed == false)) else return true
   end
 
 end

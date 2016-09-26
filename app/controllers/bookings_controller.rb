@@ -23,4 +23,10 @@ class BookingsController < ApplicationController
   	puts params.inspect
     params.require(:booking).permit(:user_id,:room_id,:start_time)
   end
+
+  def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+    redirect_to '/'
+  end
 end
