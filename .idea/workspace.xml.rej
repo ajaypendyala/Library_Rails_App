@@ -1,0 +1,9 @@
+diff a/.idea/workspace.xml b/.idea/workspace.xml	(rejected hunks)
+@@ -2,6 +2,7 @@
+  <project version="4">
+    <component name="ChangeListManager">
+      <list default="true" id="6772e093-f2c8-4632-a63a-d7011bb9dd3e" name="Default" comment="">
+++<<<<<<< Updated upstream
+ +      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/bookings_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/bookings_controller.rb" />
+ +      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+ +=======
