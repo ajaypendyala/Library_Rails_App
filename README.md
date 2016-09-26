@@ -39,8 +39,10 @@ Application URL: http://frontdesk517oodd.herokuapp.com
    i. View the reservation history of a library member (i.e., a history of the reservations that the user made and did not cancel before the reservation started). 
 
    j. Delete a library member
-
-   k. The admin can add, modify, delete other users on the application except the super_admin.
+ 
+   k. The admin can modify and delete other admins but he cannot delete himself.
+ 
+   l. The admin can add, modify, delete other users on the application except the super_admin.
 
 4. Super_admin has every power of the admin and also he can't be deleted/modified by anyone.
 
@@ -53,7 +55,7 @@ Application URL: http://frontdesk517oodd.herokuapp.com
 3. The user can only book one room and its start time can't be more than one week in the future. 
 
 ###**Search rooms**
-The "rooms" link on the navigaton bar will take the user to the room search page where he/she can search for the room based on room number, library, capacity, or start time. This search would render the results in a table along with availabilties of the each of the rooms.
+The "rooms" link on the navigaton bar will take the user to the room search page where he/she can search for the room based on room number, library, capacity, or start time. This search would render the results in a table along with availabilties of  each of the rooms.
 
 ###**Book Room**
 The user has to give the start time, the room details on the booking page to book the room. The options for the rooms are in the drop-down menu.
@@ -72,16 +74,16 @@ The user can release his/her booking from the booking history/ home page.
 The user along with his team members (optional) will receive emails on booking a room, and when he/she requests a new password.
 
 ###**User booking restriction**
-A library member can reserve only one room at a particular date and time. Only after his/her reservation is released, he/she can proceed to reserve another room. But an admin can allow a library member to reserve multiple rooms at one time.
+A library member can reserve only one room at a particular date and time. Only after his/her reservation is released, he/she can proceed to reserve another room. But an admin can allow a library member to book multiple rooms in the future.
 
 
 ##**Edge cases**
 
-1. When the admin deletes a user with a active booking, the booking is also deleted.
+1. When the admin deletes a user with a active booking, the booking associated is also deleted.
 
-2. When the admin deletes a room with a booking on it, the booking is also deleted.
+2. When the admin deletes a room with a booking on it, the booking associated is also deleted.
 
-3. The user can only make one booking at a time, and can't make a booking that doesn't start within one week.
+
 
 ##**Tests Implemented**
 
