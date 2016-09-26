@@ -49,8 +49,8 @@ Application URL: http://frontdesk517oodd.herokuapp.com
 ##**Library member features**
 
 1. The user logs in with email and password.
-2. The user is greeted by the homepage which the contains his/her booking history and the options to search for rooms, edit his/her profile, and logout.
-3. The user can only book one room within one week. 
+2. The user is greeted by the homepage which contains his/her booking history and the options to search for rooms, edit his/her profile, and logout.
+3. The user can only book one room and its start time can't be more than one week in the future. 
 
 ###**Search rooms**
 The "rooms" link on the navigaton bar will take the user to the room search page where he/she can search for the room based on room number, library, capacity, or start time. This search would render the results in a table along with availabilties of the each of the rooms.
