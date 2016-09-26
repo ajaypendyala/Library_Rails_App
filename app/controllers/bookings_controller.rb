@@ -30,7 +30,10 @@ class BookingsController < ApplicationController
     # list_of_emails -- Iterate over this. and send emails.
     # @booking has the concernded booking
     # CHANGE THE NEXT LINE.
-    UserMailer.invite_email(params(:emails)).deliver_now
+    list_of_email.each do |email|
+      UserMailer.invite_email(email, @booking).deliver_now
+    end
+    flash[:notice]='Emails sent'
     redirect_to "/"
   end
 

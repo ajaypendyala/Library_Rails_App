@@ -1,8 +1,8 @@
 Greetings, <%= user %>
 ===============================================
 
-The room   <%= Booking.last.room.to_s %> , has been booked for you
-for the time <%= Booking.last.start_time %> to <%= Booking.last.start_time+2.hours %>.
+The room   <%= booking.last.room.to_s %> , has been booked for you
+for the time <%= booking.last.start_time %> to <%= booking.last.start_time+2.hours %>.
 
 To login to the site, just follow this link: <%= @url %>.
 

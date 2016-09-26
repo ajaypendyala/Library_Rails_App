@@ -9,8 +9,9 @@ class UserMailer < ApplicationMailer
 end
 
 def invite_email(user,booking)
-  user = user
+  @user = user
+  @booking = booking
   @url  = 'https://frontdesk517oodd.herokuapp.com'
-  mail(to: user, subject: 'Library Room Booking Notification')
+  mail(to: @user, subject: 'Library Room Booking Notification')
 end
 end
