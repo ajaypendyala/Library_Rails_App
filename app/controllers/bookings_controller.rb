@@ -13,12 +13,21 @@ class BookingsController < ApplicationController
   	@booking = Booking.new(booking_params)
     raise "Not allowed to make more than 1 booking" unless @booking.user.can_book_rooms?
     @booking.save
+    session[:booking_id] = @booking.id
     UserMailer.notification_email(@booking.user).deliver_now
     flash[:notice]='Booking created. Admin will review the request.'
-    redirect_to ("/rooms/")
+    redirect_to ("/invite/")
   end
 
+  def invite
+  end
 
+  def invite_send
+    @booking = Booking.find(session[:booking_id])
+    
+    UserMailer.invite_email(params(user).deliver_now
+
+  end
   def booking_params
   	puts params.inspect
     params.require(:booking).permit(:user_id,:room_id,:start_time)
