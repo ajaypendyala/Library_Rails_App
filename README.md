@@ -4,6 +4,7 @@ CSC/ECE 517 Ruby on Rails Library Room Reservation Project
 Frontdesk is a library room reservation application written on Ruby On Rails.
 ##**Default Admin Credentials**
 Super_Admin user name: librarymanagentlists@gmail.com  , super_admin pass word: libraryroom
+### With power comes responsibility! 
 
 Github repo: https://github.com/saratkavuru/Library_Rails_App
 
@@ -42,7 +43,7 @@ Application URL: http://frontdesk517oodd.herokuapp.com
 
 
 
-##**Library member feature**
+##**Library member features**
 
 1. The user logs in with email and password.
 2. The user is greeted by the homepage which the contains his/her booking history and the options to search for rooms, edit his/her profile, and logout.
