@@ -1,0 +1,9 @@
+Greetings, <%= @user %>
+===============================================
+
+The room   <%= @user.Booking.last.room.to_s %> , has been booked for you by
+for the time <%= @user.Booking.last.start_time %> to <%= @user.Booking.last.start_time+2.hours %>.
+
+To login to the site, just follow this link: <%= @url %>.
+
+Have a great day!
