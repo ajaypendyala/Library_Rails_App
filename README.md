@@ -1,9 +1,13 @@
 # Library_Rails_App
 
-CSC/ECE 517 Ruby on Rails Library Room Reservation Project
+CSC/ECE 517 OODD Program 1
+
 Frontdesk is a library room reservation application written on Ruby On Rails.
+
 ##**Default Admin Credentials**
+#### With great power comes great responsibility! 
 Super_Admin user name: librarymanagentlists@gmail.com  , super_admin pass word: libraryroom
+
 
 Github repo: https://github.com/saratkavuru/Library_Rails_App
 
@@ -38,21 +42,21 @@ Application URL: http://frontdesk517oodd.herokuapp.com
 
    k. The admin can add, modify, delete other users on the application except the super_admin.
 
-4. Super_admin has every power of the admin but he can't be deleted/modified.
+4. Super_admin has every power of the admin and also he can't be deleted/modified by anyone.
 
 
 
-##**Library member feature**
+##**Library member features**
 
 1. The user logs in with email and password.
 2. The user is greeted by the homepage which the contains his/her booking history and the options to search for rooms, edit his/her profile, and logout.
 3. The user can only book one room within one week. 
 
 ###**Search rooms**
-The "rooms" link on the navigaton bar wil take the user to the room search page where he/she can search for the room based on room number, library, capacity, and start time. This search would render the results in a table along with availabilties of the each of the rooms.
+The "rooms" link on the navigaton bar will take the user to the room search page where he/she can search for the room based on room number, library, capacity, or start time. This search would render the results in a table along with availabilties of the each of the rooms.
 
 ###**Book Room**
-The user has to give the start time, the room details on the booking page to book the room. The options for the rooms are in the drop-down.
+The user has to give the start time, the room details on the booking page to book the room. The options for the rooms are in the drop-down menu.
 
 ###**Delete booking**
 The user can release his/her booking from the booking history/ home page.
@@ -68,7 +72,7 @@ The user can release his/her booking from the booking history/ home page.
 The user will receive emails on booking a room, and when he/she requests a new password.
 
 ###**User booking restriction**
-A library member can reserve only one room at a particular date and time. Only after his/her reservation is released, he/she can proceed to reserve another room. 
+A library member can reserve only one room at a particular date and time. Only after his/her reservation is released, he/she can proceed to reserve another room. But an admin can allow a library member to reserve multiple rooms at one time.
 
 
 ##**Edge cases**
