@@ -69,7 +69,7 @@ The user can release his/her booking from the booking history/ home page.
 ##**Extra Credits**
 
 ###**Email**
-The user will receive emails on booking a room, and when he/she requests a new password.
+The user along with his team members (optional) will receive emails on booking a room, and when he/she requests a new password.
 
 ###**User booking restriction**
 A library member can reserve only one room at a particular date and time. Only after his/her reservation is released, he/she can proceed to reserve another room. But an admin can allow a library member to reserve multiple rooms at one time.
@@ -82,6 +82,12 @@ A library member can reserve only one room at a particular date and time. Only a
 2. When the admin deletes a room with a booking on it, the booking is also deleted.
 
 3. The user can only make one booking at a time, and can't make a booking that doesn't start within one week.
+
+##**Tests Implemented**
+
+1. The model room has been tested. The fucntion of search of search and the feature that the room can't be saved without capacity or room number has been tested.
+
+2. The controller for Rooms has been tested.
 
 
 
