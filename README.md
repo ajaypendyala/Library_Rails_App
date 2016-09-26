@@ -3,8 +3,10 @@
 CSC/ECE 517 OODD Program 1
 
 Team Members : 
-Tanmay Goel (tgoel@ncsu.edu), 
-Sarat Kavuru (skavuru@ncsu.edu), 
+Tanmay Goel (tgoel@ncsu.edu)
+
+Sarat Kavuru (skavuru@ncsu.edu)
+
 Ajay Chandra Pendyala(apendya@ncsu.edu)
 
 Frontdesk is a library room reservation application written on Ruby On Rails.
