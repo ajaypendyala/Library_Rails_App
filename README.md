@@ -9,11 +9,13 @@ Sarat Kavuru (skavuru@ncsu.edu)
 
 Ajay Chandra Pendyala(apendya@ncsu.edu)
 
-Frontdesk is a library room reservation application written on Ruby On Rails.
+Frontdesk is a library room reservation application written in Ruby On Rails.
 
 ##**Default Admin Credentials**
 #### With great power comes great responsibility! 
 Super_Admin user name: librarymanagentlists@gmail.com  , super_admin pass word: libraryroom
+
+Also, please use a valid email address while signing up, or else the system wouldn't be able to send you an email after you book a room.
 
 
 Github repo: https://github.com/saratkavuru/Library_Rails_App
