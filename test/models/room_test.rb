@@ -40,7 +40,7 @@ class RoomTest < ActiveSupport::TestCase
   end
 
   test "find room if available" do
-    room = Room.find_by_room_number "2514"
+    room = Room.find_by_room_number "2515"
     assert room
 
   end
