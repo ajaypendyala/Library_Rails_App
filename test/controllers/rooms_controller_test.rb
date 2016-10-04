@@ -17,4 +17,8 @@ class RoomsControllerTest < ActionDispatch::IntegrationTest
     get '/rooms'
     assert_response :success
    end
+
+
+   
+
 end
