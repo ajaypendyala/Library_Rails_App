@@ -50,10 +50,11 @@ class Ability
       can :manage, :all
       cannot :destroy, User, :id => user.id
       cannot :create, User, :is_super_admin? => true
+      cannot :destroy, Role
       cannot :destroy, Library
       cannot :update, Library
       cannot :create, Library
-      # cannot :destroy, User, :id => user.id
+
       # Allow super admins to wreck havoc!
     else
       cannot :access, :rails_admin
