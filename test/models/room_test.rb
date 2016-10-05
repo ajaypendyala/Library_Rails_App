@@ -30,6 +30,24 @@ class RoomTest < ActiveSupport::TestCase
     assert_not room.save
   end
 
+<<<<<<< HEAD
+=======
+  test "should not save a room with no library" do
+    room = Room.new
+    
+    
+    room.room_number = 2223
+    room.capacity = 4
+    assert room.save
+  end
+
+  test "find room if available" do
+    room = Room.find_by_room_number "2515"
+    assert room
+
+  end
+
+>>>>>>> 4440f60c41013b8b842be4f005648416f54f8c64
 
 
   

@@ -2,16 +2,36 @@
 
 CSC/ECE 517 OODD Program 1
 
+<<<<<<< HEAD
 Frontdesk is a library room reservation application written on Ruby On Rails.
+=======
+Team Members : 
+Tanmay Goel (tgoel@ncsu.edu)
+
+Sarat Kavuru (skavuru@ncsu.edu)
+
+Ajay Chandra Pendyala(apendya@ncsu.edu)
+
+Frontdesk is a library room reservation application written in Ruby On Rails.
+>>>>>>> 4440f60c41013b8b842be4f005648416f54f8c64
 
 ##**Default Admin Credentials**
 #### With great power comes great responsibility! 
 Super_Admin user name: librarymanagentlists@gmail.com  , super_admin pass word: libraryroom
 
+<<<<<<< HEAD
 
 Github repo: https://github.com/saratkavuru/Library_Rails_App
 
 Application URL: https://frontdesk517oodd.herokuapp.com/users/sign_in
+=======
+Also, please use a valid email address while signing up, or else the system wouldn't be able to send you an email after you book a room.
+
+
+Github repo: https://github.com/saratkavuru/Library_Rails_App
+
+Application URL: http://frontdesk517oodd.herokuapp.com
+>>>>>>> 4440f60c41013b8b842be4f005648416f54f8c64
 
 ##**Features:**
 
