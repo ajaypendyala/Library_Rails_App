@@ -7,7 +7,7 @@ Tanmay Goel (tgoel@ncsu.edu)
 
 Sarat Kavuru (skavuru@ncsu.edu)
 
-Ajay Chandra Pendyala(apendya@ncsu.edu)
+Ajay Chandra Pendyala (apendya@ncsu.edu)
 
 Frontdesk is a library room reservation application written in Ruby On Rails.
 
