@@ -4,11 +4,11 @@ class BookingsController < ApplicationController
     @booking = Booking.new
     # @booking.user = current_user
   end
-
+# To display all the bookings
   def show
   	@booking = Booking.all
   end
-
+# to create new booking
   def create
   	@booking = Booking.new(booking_params)
     raise "Not allowed to make more than 1 booking" unless @booking.user.can_book_rooms?
@@ -22,7 +22,7 @@ class BookingsController < ApplicationController
   def invite
 
   end
-
+# to invite members for the booking
   def invite_send
     @booking = Booking.find(session[:booking_id])
     params.permit(:emails)
@@ -41,7 +41,7 @@ class BookingsController < ApplicationController
   	puts params.inspect
     params.require(:booking).permit(:user_id,:room_id,:start_time)
   end
-
+# to delete the booking
   def destroy
     @booking = Booking.find(params[:id])
     @booking.destroy
