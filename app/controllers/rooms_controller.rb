@@ -1,6 +1,6 @@
 class RoomsController < ApplicationController
   before_action :authenticate_user!
-  def index
+  def index # search rooms with the options selected
   	# params.each {|param, val| puts "#{param} : #{val}"}
   	#search  - room number .. .
   	# if params.has_key?(:search)
@@ -30,7 +30,7 @@ class RoomsController < ApplicationController
     	@rooms = Room.all
     end
   end
-
+# to display with the requested params
   def show
   	@room = Room.find(params[:id])
   end
