@@ -97,7 +97,7 @@ A library member can reserve only one room at a particular date and time. Only a
 
 ##**Tests Implemented**
 
-1. The model room has been tested. The function of search and the feature that a room can't be saved without capacity or room number has been tested.
+1. The model room has been tested. The function of search and the feature that a room can't be saved without capacity or room number or library has been tested.
 
 2. The controller for Rooms has been tested.
 
