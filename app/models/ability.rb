@@ -42,6 +42,7 @@ class Ability
       cannot :update, User, :is_super_admin? => true
       cannot :create, User, :is_super_admin? => true
       cannot :destroy, Role
+      cannot :update, Role
       cannot :destroy, Library
       cannot :update, Library
       cannot :create, Library
@@ -52,6 +53,7 @@ class Ability
       cannot :destroy, User, :id => user.id
       cannot :create, User, :is_super_admin? => true
       cannot :destroy, Role
+      cannot :update, Role
       cannot :destroy, Library
       cannot :update, Library
       cannot :create, Library
