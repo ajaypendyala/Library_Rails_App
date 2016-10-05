@@ -48,6 +48,8 @@ class Ability
       can :access, :rails_admin
       can :dashboard
       can :manage, :all
+      cannot :destroy, User, :id => user.id
+      cannot :create, User, :is_super_admin? => true
       cannot :destroy, Library
       cannot :update, Library
       cannot :create, Library
