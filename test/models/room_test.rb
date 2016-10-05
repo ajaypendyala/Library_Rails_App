@@ -30,8 +30,6 @@ class RoomTest < ActiveSupport::TestCase
     assert_not room.save
   end
 
-<<<<<<< HEAD
-=======
   test "should not save a room with no library" do
     room = Room.new
     
@@ -47,7 +45,7 @@ class RoomTest < ActiveSupport::TestCase
 
   end
 
->>>>>>> 4440f60c41013b8b842be4f005648416f54f8c64
+
 
 
   
