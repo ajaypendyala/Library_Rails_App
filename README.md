@@ -40,7 +40,7 @@ Application URL: http://frontdesk517oodd.herokuapp.com
 
    e. Admin can also change the status of a room i.e., she/he can book or release a room on behalf of a library member. ( Admin -> Nav -> Bookings -> Add new)
 
-   f. View the booking history of a room
+   f. View the booking history of a room ( Admin -> Nav -> rooms -> click 'eye symbol' next to the room details)
 
    g. Delete a room from the system
 
