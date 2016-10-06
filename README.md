@@ -21,7 +21,7 @@ Also, please use a valid email address while signing up, or else the system woul
 
 Github repo: https://github.com/saratkavuru/Library_Rails_App
 
-Application URL: http://frontdesk517oodd.herokuapp.com
+Application URL: https://frontdesk517oodd.herokuapp.com
 
 ##**Features:**
 
@@ -85,6 +85,7 @@ The user along with his team members (optional) will receive emails on booking a
 
 ###**User booking restriction**
 A library member can reserve only one room at a particular date and time. Only after his/her reservation is released, he/she can proceed to reserve another room. But an admin can allow a library member to book multiple rooms in the future.
+To give an user the power to book multiple rooms in the future, open the specific user profile in the admin mode and tick the multiple bookings allowed checkbox.
 
 
 ##**Edge cases**
