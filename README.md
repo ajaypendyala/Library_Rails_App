@@ -93,6 +93,8 @@ A library member can reserve only one room at a particular date and time. Only a
 
 2. When the admin deletes a room with a booking on it, the booking associated is also deleted.
 
+3. When a user/ room is deleted, their booking histories are also deleted.
+
 
 
 ##**Tests Implemented**
