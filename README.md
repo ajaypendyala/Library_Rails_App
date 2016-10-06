@@ -38,7 +38,7 @@ Application URL: http://frontdesk517oodd.herokuapp.com
 
    d. Edit the details of a room. The edit button is provided for each room in the room list.
 
-   e. Admin can also change the status of a room i.e., she/he can book or release a room on behalf of a library member. ( Admin -> Nav -> Bookings -> Add new
+   e. Admin can also change the status of a room i.e., she/he can book or release a room on behalf of a library member. ( Admin -> Nav -> Bookings -> Add new)
 
    f. View the booking history of a room
 
