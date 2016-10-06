@@ -30,15 +30,15 @@ Application URL: http://frontdesk517oodd.herokuapp.com
 2. The admin has the interface like any other user but also a link to admin page on the navigation bar.
 3. This link will take the admin to the webpage where he can do the following:
 
-   a. Add a room to the system. A room will have the following attributes: Room Number (unique for each room), building, size, status
+   a. Add a room to the system. A room will have the following attributes: Room Number (unique for each room), building, size, status. ( Admin -> Navigation-> Rooms -> Add new)
 
-   b. View the list of all the rooms. View the schedule for the rooms
+   b. View the list of all the rooms. View the schedule for the rooms (Admin -> Navigation-> Rooms)
 
    c. View the details of a room. Also, show the library member who has the room if its status is “booked”.
 
-   d. Edit the details of a room 
+   d. Edit the details of a room. The edit button is provided for each room in the room list.
 
-   e. Admin can also change the status of a room i.e., she/he can book or release a room on behalf of a library member. 
+   e. Admin can also change the status of a room i.e., she/he can book or release a room on behalf of a library member. ( Admin -> Nav -> Bookings -> Add new
 
    f. View the booking history of a room
 
